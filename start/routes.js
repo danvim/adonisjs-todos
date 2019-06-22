@@ -16,5 +16,8 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+Route.get('todos', 'TodoController.index').prefix('api')
+Route.post('todos', 'TodoController.post').prefix('api').validator('Todo')
+
 // This has to be the last route
 Route.any('*', ({ view }) => view.render('app'))

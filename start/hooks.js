@@ -8,7 +8,7 @@ hooks.after.providersBooted(async () => {
   View.global('versionjs', (filename) => {
     filename = `/js/${filename}.js`
     if (!mixManifest.hasOwnProperty(filename)) {
-      throw new Error('Could not find asset for versioning' + filename)
+      throw new Error('Could not find asset for versioning ' + filename)
     }
 
     return mixManifest[filename]
@@ -17,7 +17,7 @@ hooks.after.providersBooted(async () => {
   View.global('versioncss', (filename) => {
     filename = `/css/${filename}.css`
     if (!mixManifest.hasOwnProperty(filename)) {
-      throw new Error('Could not find asset for versioning' + filename)
+      throw new Error('Could not find asset for versioning ' + filename)
     }
 
     return mixManifest[filename]
